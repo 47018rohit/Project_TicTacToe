@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+body{
+    font-family: 'Sono', sans-serif;
+    text-align: center;
+    
+}
+
+.choose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 5%;
+}
+button{
+    font-size: 30px;
+    width: 150px;
+    height: 45px;
+    font-family: 'Sono', sans-serif;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+}
+button:hover{
+    background-color: bisque;
+    transition: all ease, 400ms;
+}
+.chosen{
+    box-shadow: 0px 0px 1px 3px grey; 
+}
+
+.gameBoard{
+
+    aspect-ratio: 1; width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    text-align: center;    
+    margin: 10% auto;
+}
+
+.cell{
+    border: 2px solid black;
+    font-family: 'Sono', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+.cell:hover{
+    background-color: rgb(168, 214, 253);
+}
+.cell:nth-child(3n+1){
+    border-left: none;
+}
+.cell:nth-child(3n){
+    border-right: none;
+}
+.cell:nth-last-child(2),.cell:nth-last-child(1),.cell:nth-last-child(3){
+    border-bottom: none;
+}
+.cell:nth-child(1),.cell:nth-child(2),.cell:nth-child(3){
+    border-top: none;
+}
+.reset>button:hover{
+    background-color: black;
+    color: aliceblue;
+    transition: all ease, 400ms;
+}
